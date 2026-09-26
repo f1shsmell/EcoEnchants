@@ -1,34 +1,36 @@
-name: Build
+name: Build EcoEnchants
+
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-    paths:
-      - '**/*.kt'
-      - '**/*.kts'
   push:
-    branches:
-      - master
-    paths:
-      - '**/*.kt'
-      - '**/*.kts'
+    branches: [ master ]
   workflow_dispatch:
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set up JDK 25
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '25'
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-      - name: Build
-        run: ./gradlew build --full-stacktrace
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x ./gradlew
+
+    - name: Build with Gradle
+      run: ./gradlew clean build
+
+    # 这里使用 ** 通配符匹配所有子项目下的 build/libs 目录，彻底解决找不到 jar 包的问题
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: EcoEnchants-Build
+        path: "**/build/libs/*.jar"
