@@ -1,4 +1,4 @@
-﻿import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     kotlin("jvm") version "2.3.0"
@@ -20,6 +20,9 @@ base {
 }
 
 dependencies {
+    // === 关键修改：显式引入 libreforge，否则打包会丢失核心依赖 ===
+    implementation("com.willfp:libreforge:$libreforgeVersion")
+    
     implementation(project(":eco-core:core-plugin"))
     implementation(project(":eco-core:core-nms:v1_21_8", configuration = "reobf"))
     implementation(project(":eco-core:core-nms:v1_21_10", configuration = "reobf"))
@@ -150,7 +153,6 @@ allprojects {
         compileJava {
             options.isDeprecation = true
             options.encoding = "UTF-8"
-
             dependsOn(clean)
         }
 
