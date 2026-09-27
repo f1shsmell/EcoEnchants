@@ -20,9 +20,10 @@ base {
 }
 
 dependencies {
-    // === 关键修改：显式引入 libreforge，否则打包会丢失核心依赖 ===
-    implementation("com.willfp:libreforge:$libreforgeVersion")
-    
+    // === 核心修改：从本地 lib 文件夹引入打包好的 libreforge jar ===
+    // 你的截图显示文件在 lib/ 目录下，这行代码告诉 Gradle 直接把这个本地 jar 打进最终的 -all.jar 里
+    implementation(files("lib/libreforge-2026.38.jar"))
+
     implementation(project(":eco-core:core-plugin"))
     implementation(project(":eco-core:core-nms:v1_21_8", configuration = "reobf"))
     implementation(project(":eco-core:core-nms:v1_21_10", configuration = "reobf"))
