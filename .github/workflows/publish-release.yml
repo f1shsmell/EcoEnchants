@@ -8,6 +8,10 @@ on:
       - '*'
 jobs:
   publish:
+    # Upstream-only: publishes to Auxilor's private Maven repo using the
+    # MAVEN_USERNAME/MAVEN_PASSWORD secrets, which only exist in the official
+    # repository. Forks publish via GitHub Releases instead (see release.yml).
+    if: github.repository_owner == 'Auxilor'
     runs-on: ubuntu-latest
     permissions:
       contents: read
