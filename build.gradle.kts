@@ -82,6 +82,16 @@ afterEvaluate {
 tasks.matching { it.name.startsWith("generatePomFileFor") }.configureEach {
     mustRunAfter(tasks.named("clean"))
 }
+
+// Fix a task ordering race: compileJava dependsOn(clean) (below) makes every
+// build wipe the build directory via clean -> cleanLibreforgeJar, which deletes
+// build/libreforge-relocated. Without this ordering constraint,
+// relocatedLibreforgeJar can run before clean, and its output is deleted before
+// libreforgeJar embeds it - producing a jar without the bundled libreforge
+// ("LibreforgeNotFoundError: libreforge wasn't found in the plugin jar").
+tasks.matching { it.name == "relocatedLibreforgeJar" }.configureEach {
+    mustRunAfter(tasks.named("clean"), tasks.named("cleanLibreforgeJar"))
+}
 tasks.register("publishToAuxilor") {
     dependsOn(
         "publishPrivatePublicationToAuxilorRepository",
