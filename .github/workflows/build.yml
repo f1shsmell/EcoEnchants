@@ -1,36 +1,47 @@
-name: Build EcoEnchants
-
+name: Build
 on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '**/*.kt'
+      - '**/*.kts'
   push:
-    branches: [ master ]
+    branches:
+      - master
+    paths:
+      - '**/*.kt'
+      - '**/*.kts'
+      - 'gradle.properties'
+      - '.github/workflows/build.yml'
   workflow_dispatch:
-
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-
-    - name: Set up JDK 21
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: '21'
-
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v3
-
-    - name: Grant execute permission for gradlew
-      run: chmod +x ./gradlew
-
-    - name: Build with Gradle
-      run: ./gradlew clean build
-
-    # 这里使用 ** 通配符匹配所有子项目下的 build/libs 目录，彻底解决找不到 jar 包的问题
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: EcoEnchants-Build
-        path: "**/build/libs/*.jar"
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+      - name: Build
+        # --max-workers=2: paperweight-userdev setups for the 7 NMS modules are
+        # memory-hungry; running them in parallel OOM-kills the Gradle daemon on
+        # standard 16GB runners.
+        run: ./gradlew build libreforgeJar --full-stacktrace --max-workers=2
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: EcoEnchants
+          path: |
+            bin/*.jar
+            build/libs/*.jar
+          if-no-files-found: error

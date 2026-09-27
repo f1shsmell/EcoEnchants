@@ -1,4 +1,4 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+﻿import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     kotlin("jvm") version "2.3.0"
@@ -20,9 +20,6 @@ base {
 }
 
 dependencies {
-    // 保留引入，确保编译阶段能找到类
-    implementation(files("lib/libreforge-2026.38.jar"))
-
     implementation(project(":eco-core:core-plugin"))
     implementation(project(":eco-core:core-nms:v1_21_8", configuration = "reobf"))
     implementation(project(":eco-core:core-nms:v1_21_10", configuration = "reobf"))
@@ -35,9 +32,11 @@ dependencies {
 
 publishing {
     publications {
+        // maven-private: only the shaded jar
         create<MavenPublication>("private") {
             artifactId = rootProject.name
         }
+        // maven-releases (served publicly via the maven-public group): the API jar
         create<MavenPublication>("release") {
             artifactId = rootProject.name
         }
@@ -62,10 +61,17 @@ publishing {
     }
 }
 
+// Neither publication is attached to a software component, so only the single jar
+// and its pom are published - no sources, javadoc, or classified variants.
 afterEvaluate {
     publishing.publications.named<MavenPublication>("private") {
         artifact(tasks.named("libreforgeJar"))
     }
+    // The public artifact is what other plugins compile against, so it must be the
+    // plain jar, not shadowJar: shadowJar drops META-INF (taking the .kotlin_module
+    // with it, which hides every top-level declaration from the Kotlin compiler) and
+    // relocates kotlin.* into com.willfp.eco.libs.kotlin, which rewrites @kotlin.Metadata
+    // and makes the whole API read as Java. eco publishes its API the same way.
     publishing.publications.named<MavenPublication>("release") {
         artifact(project(":eco-core:core-plugin").tasks.named<Jar>("jar")) {
             classifier = ""
@@ -92,6 +98,7 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
+
         maven("https://repo.papermc.io/repository/maven-public/")
         maven("https://repo.auxilor.io/repository/maven-public/")
         maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
@@ -115,13 +122,11 @@ allprojects {
     }
 
     tasks {
-        test { useJUnitPlatform() }
+        test {
+            useJUnitPlatform()
+        }
 
         shadowJar {
-            // === 核心修改：强制把本地 jar 解压合并到包里 ===
-            // 忽略原本的 files() 引入，直接解压 lib 下的 jar
-            from(zipTree(rootProject.file("lib/libreforge-2026.38.jar")))
-
             exclude("META-INF/**")
             relocate("com.willfp.libreforge.loader", "com.willfp.ecoenchants.libreforge.loader")
             relocate("kotlin", "com.willfp.eco.libs.kotlin")
@@ -130,12 +135,22 @@ allprojects {
             relocate("kotlin.reflect", "com.willfp.eco.libs.kotlin.reflect")
         }
 
-        compileKotlin { compilerOptions { jvmTarget.set(JvmTarget.JVM_21) } }
-        compileTestKotlin { compilerOptions { jvmTarget.set(JvmTarget.JVM_21) } }
+        compileKotlin {
+            compilerOptions {
+                jvmTarget.set(JvmTarget.JVM_21)
+            }
+        }
+
+        compileTestKotlin {
+            compilerOptions {
+                jvmTarget.set(JvmTarget.JVM_21)
+            }
+        }
 
         compileJava {
             options.isDeprecation = true
             options.encoding = "UTF-8"
+
             dependsOn(clean)
         }
 
@@ -150,11 +165,18 @@ allprojects {
             }
         }
 
-        build { dependsOn(shadowJar) }
-        withType<JavaCompile>().configureEach { options.release = 21 }
+        build {
+            dependsOn(shadowJar)
+        }
+
+        withType<JavaCompile>().configureEach {
+            options.release = 21
+        }
     }
 
     java {
-        toolchain { languageVersion = JavaLanguageVersion.of(25) }
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(25)
+        }
     }
 }
