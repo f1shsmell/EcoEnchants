@@ -1,6 +1,6 @@
-display-name: "Lumberjack"
-description: "Chop down up to &a%placeholder%&r blocks of a tree at once"
-placeholder: "4 * %level%"
+display-name: "伐木工"
+description: "一次最多砍伐 &a%placeholder%&r 个树木方块"
+placeholder: "8 * %level%"
 type: normal
 
 targets:
@@ -16,7 +16,7 @@ enchantable: true
 effects:
   - id: mine_vein
     args:
-      limit: "4 * %level%"
+      limit: "8 * %level%"
     filters:
       blocks:
         - oak_wood
@@ -25,9 +25,13 @@ effects:
         - jungle_wood
         - birch_wood
         - mangrove_wood
+        - cherry_wood
+        - pale_oak_wood
         - crimson_stem
+        - crimson_hyphae
         - spruce_wood
         - warped_stem
+        - warped_hyphae
         - oak_log
         - dark_oak_log
         - acacia_log
@@ -35,6 +39,8 @@ effects:
         - birch_log
         - spruce_log
         - mangrove_log
+        - cherry_log
+        - pale_oak_log
     triggers:
       - mine_block
 

@@ -1,5 +1,5 @@
-display-name: "Brightness"
-description: "Deal &a%placeholder%%&r more damage to the warden while in the deep dark"
+display-name: "辉光"
+description: "在深暗之域对监守者造成 &a%placeholder%%&r 额外伤害"
 placeholder: "4 * %level%"
 type: common
 

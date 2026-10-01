@@ -1,5 +1,5 @@
-display-name: "Sorcery"
-description: "Gives a &a%placeholder%%&r boost to Enchanting experience"
+display-name: "巫术"
+description: "附魔经验值提升 &a%placeholder%%"
 placeholder: "10 * %level%"
 type: normal
 

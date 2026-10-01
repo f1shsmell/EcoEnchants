@@ -1,5 +1,5 @@
-display-name: "Getaway"
-description: "Gain a &a%placeholder%%&r bonus to movement speed below &a20%&r health"
+display-name: "脱兔"
+description: "生命低于 &a20%&r 时移动速度提升 &a%placeholder%%"
 placeholder: "10 * %level%"
 type: normal
 

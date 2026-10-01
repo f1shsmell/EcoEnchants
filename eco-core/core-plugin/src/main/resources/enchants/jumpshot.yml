@@ -1,5 +1,5 @@
-display-name: "Jumpshot"
-description: "Deal &a%placeholder%%&r more damage in the air"
+display-name: "跳射"
+description: "在空中造成 &a%placeholder%%&r 额外伤害"
 placeholder: "10 * %level%"
 type: normal
 

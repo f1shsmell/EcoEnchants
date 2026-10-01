@@ -1,5 +1,5 @@
-display-name: "Metabolism"
-description: "Increases the hunger gained by eating food by &a%placeholder%%"
+display-name: "新陈代谢"
+description: "进食获得的饥饿值提高 &a%placeholder%%"
 placeholder: "%level% * 12.5"
 type: normal
 

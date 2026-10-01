@@ -1,5 +1,5 @@
-display-name: "Blackout"
-description: "Gives a &a%chance%%&r chance to give your opponent darkness for &a%seconds%&r seconds"
+display-name: "黑幕"
+description: "有 &a%chance%%&r 的概率使敌人陷入黑暗 &a%seconds%&r 秒"
 placeholders:
   chance: "6 + %level%"
   seconds: "4 + ceil(%level% / 2)"

@@ -1,5 +1,5 @@
-display-name: "Block Breather"
-description: "&a%placeholder%% &rchance to ignore suffocation damage"
+display-name: "方块呼吸"
+description: "有 &a%placeholder%% &r的概率免疫窒息伤害"
 placeholder: "%level% * 15"
 type: normal
 

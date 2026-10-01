@@ -1,5 +1,5 @@
-display-name: "Wyvern"
-description: "Gives a &a%placeholder%%&r bonus to melee damage"
+display-name: "飞龙"
+description: "近战伤害提升 &a%placeholder%%"
 placeholder: "10 * %level%"
 type: normal
 

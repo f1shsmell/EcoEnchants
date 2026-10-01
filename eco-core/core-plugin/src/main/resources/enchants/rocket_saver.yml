@@ -1,5 +1,5 @@
-display-name: "Rocket Saver"
-description: "Gives a &a%placeholder%%&r chance to not consume fireworks when boosting"
+display-name: "烟花省省"
+description: "飞行加速时有 &a%placeholder%%&r 的概率不消耗烟花"
 placeholder: "%level% * 20"
 type: normal
 

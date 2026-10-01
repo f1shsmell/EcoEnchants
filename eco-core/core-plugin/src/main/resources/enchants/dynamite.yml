@@ -1,5 +1,5 @@
-display-name: "Dynamite"
-description: "Mines blocks in a &a%placeholder%x%placeholder%&r area"
+display-name: "炸药"
+description: "以 &a%placeholder%x%placeholder%&r 的范围挖掘方块"
 placeholder: "1 + %level% * 4"
 type: spell
 

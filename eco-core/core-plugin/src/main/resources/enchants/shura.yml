@@ -1,5 +1,5 @@
-display-name: "Shura"
-description: "Gives a &a%placeholder%x&r bonus to critical damage when under half health"
+display-name: "修罗"
+description: "生命低于一半时暴击伤害提升 &a%placeholder%x"
 placeholder: "1 + 0.25 * %level%"
 type: normal
 

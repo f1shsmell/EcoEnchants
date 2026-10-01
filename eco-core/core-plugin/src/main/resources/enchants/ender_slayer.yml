@@ -1,5 +1,5 @@
-display-name: "Ender Slayer"
-description: "Gives a &a%placeholder%&r bonus to melee damage against end mobs"
+display-name: "末影杀手"
+description: "对末地生物的近战伤害提升 &a%placeholder%"
 placeholder: "1 + 0.5 * %level%"
 type: normal
 

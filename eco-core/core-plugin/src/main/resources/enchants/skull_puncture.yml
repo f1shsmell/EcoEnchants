@@ -1,5 +1,5 @@
-display-name: "Skull Puncture"
-description: "Increases headshot damage by &a%placeholder%%"
+display-name: "爆头"
+description: "爆头伤害提高 &a%placeholder%%"
 placeholder: "10 * %level%"
 type: normal
 

@@ -1,5 +1,5 @@
-display-name: "Woodworker"
-description: "Gives a &a%placeholder%%&r boost to Woodcutting experience"
+display-name: "木工"
+description: "伐木经验值提升 &a%placeholder%%"
 placeholder: "4 * %level%"
 type: normal
 

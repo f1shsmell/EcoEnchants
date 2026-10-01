@@ -1,5 +1,5 @@
-display-name: "Rebounding"
-description: "Rebounds &a%placeholder%%&r of incoming damage back at your attacker"
+display-name: "反震"
+description: "将所受伤害的 &a%placeholder%%&r 反弹给攻击者"
 placeholder: "20 + %level% * 10"
 type: normal
 

@@ -1,5 +1,5 @@
-display-name: "Nether Affinity"
-description: "Increases damage dealt in the nether by &a%placeholder%%"
+display-name: "下界亲和"
+description: "在下界造成的伤害提高 &a%placeholder%%"
 placeholder: "20 + %level% * 10"
 type: normal
 

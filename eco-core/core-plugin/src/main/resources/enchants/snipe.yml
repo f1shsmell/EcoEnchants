@@ -1,5 +1,5 @@
-display-name: "Snipe"
-description: "Arrows deal &a%damage%%&r more damage for each &a%blocks%&r blocks travelled"
+display-name: "狙击"
+description: "箭矢每飞行 &a%blocks%&r 格,伤害提高 &a%damage%%"
 placeholders:
   damage: "1 * %level%"
   blocks: "11 - ceil(%level% / 2)"

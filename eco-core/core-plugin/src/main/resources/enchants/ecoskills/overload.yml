@@ -1,5 +1,5 @@
-display-name: "Overload"
-description: "Gives &a+%placeholder%&r %ecoskills_crit_chance_name%&r and &a+%placeholder%&r %ecoskills_crit_damage_name%"
+display-name: "超载"
+description: "增加 &a+%placeholder%&r 点 %ecoskills_crit_chance_name%&r 和 &a+%placeholder%&r 点 %ecoskills_crit_damage_name%"
 placeholder: "1 * %level%"
 type: normal
 

@@ -1,5 +1,5 @@
-display-name: "Stun"
-description: "Gives a &a%placeholder%%&r chance to stun attacked mobs for &a2&r seconds"
+display-name: "眩晕"
+description: "有 &a%placeholder%%&r 的概率使被攻击的生物眩晕 &a2&r 秒"
 placeholder: "2.5 + 2.5 * %level%"
 type: normal
 

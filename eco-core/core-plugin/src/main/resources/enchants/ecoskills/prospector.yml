@@ -1,5 +1,5 @@
-display-name: "Prospector"
-description: "Gives a &a%placeholder%%&r boost to Mining experience"
+display-name: "探矿者"
+description: "采矿经验值提升 &a%placeholder%%"
 placeholder: "3 * %level%"
 type: normal
 

@@ -1,5 +1,5 @@
-display-name: "Rapid"
-description: "Lets you shoot full speed arrows with the bow at &a%placeholder%%&r tension"
+display-name: "速射"
+description: "弓蓄力 &a%placeholder%%&r 时即可射出满速箭矢"
 placeholder: "100 - (15 * %level%)"
 type: normal
 

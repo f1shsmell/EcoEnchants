@@ -1,5 +1,5 @@
-display-name: "Foraging"
-description: "Gives a &a%placeholder%%&r boost to apple drops from leaves"
+display-name: "采摘"
+description: "树叶掉落苹果的概率提升 &a%placeholder%%"
 placeholder: "ceil(((1 / (%level% + 2)) + ((%level% + 1) / 2)) * 100 - 100)"
 type: normal
 

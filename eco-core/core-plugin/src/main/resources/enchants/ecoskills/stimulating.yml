@@ -1,5 +1,5 @@
-display-name: "Stimulating"
-description: "Gives a &a%bonus%%&r bonus to all stats for &a%seconds%&r seconds"
+display-name: "振奋"
+description: "全属性提升 &a%bonus%%&r,持续 &a%seconds%&r 秒"
 placeholders:
   bonus: "10 * %level%"
   seconds: "3 * %level%"

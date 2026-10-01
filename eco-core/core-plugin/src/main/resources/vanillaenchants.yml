@@ -2,8 +2,8 @@
 # The option is there for the display option to sort by rarity.
 
 protection:
-  name: "Protection"
-  description: "Reduces incoming damage by &a%placeholder%%"
+  name: "保护"
+  description: "受到的伤害减少 &a%placeholder%%"
   placeholder: "%level% * 4"
   type: normal
   rarity: common
@@ -13,8 +13,8 @@ protection:
     enabled: false
 
 fire_protection:
-  name: "Fire Protection"
-  description: "Reduces incoming fire damage by &a%damage%%&r and burn time by &a%time%%"
+  name: "火焰保护"
+  description: "受到的火焰伤害减少 &a%damage%%&r,燃烧时间减少 &a%time%%"
   placeholders:
     damage: "%level% * 8"
     time: "%level% * 15"
@@ -24,8 +24,8 @@ fire_protection:
     enabled: false
 
 feather_falling:
-  name: "Feather Falling"
-  description: "Reduces fall damage by &a%placeholder%%"
+  name: "摔落保护"
+  description: "摔落伤害减少 &a%placeholder%%"
   placeholder: "%level% * 12"
   type: normal
   rarity: uncommon
@@ -33,8 +33,8 @@ feather_falling:
     enabled: false
 
 blast_protection:
-  name: "Blast Protection"
-  description: "Reduces incoming explosion damage by &a%damage%%&r and incoming blast knockback by &a%knockback%%"
+  name: "爆炸保护"
+  description: "受到的爆炸伤害减少 &a%damage%%&r,爆炸击退减少 &a%knockback%%"
   placeholders:
     damage: "%level% * 8"
     knockback: "%level% * 15"
@@ -44,8 +44,8 @@ blast_protection:
     enabled: false
 
 projectile_protection:
-  name: "Projectile Protection"
-  description: "Reduces incoming projectile damage by &a%placeholder%%"
+  name: "弹射物保护"
+  description: "受到的弹射物伤害减少 &a%placeholder%%"
   placeholder: "%level% * 8"
   type: normal
   rarity: uncommon
@@ -53,8 +53,8 @@ projectile_protection:
     enabled: false
 
 respiration:
-  name: "Respiration"
-  description: "Extends underwater breathing time by &a%seconds%&r seconds and gives a &a%chance%%&r chance to ignore drowning damage"
+  name: "水下呼吸"
+  description: "水下呼吸时间延长 &a%seconds%&r 秒,并有 &a%chance%%&r 的概率免疫溺水伤害"
   placeholders:
     seconds: "15 * %level%"
     chance: "%level% / (%level% + 1)"
@@ -64,16 +64,16 @@ respiration:
     enabled: false
 
 aqua_affinity:
-  name: "Aqua Affinity"
-  description: "Removes underwater mining speed penalty"
+  name: "水下速掘"
+  description: "消除水下挖掘速度惩罚"
   type: normal
   rarity: rare
   drag-and-drop:
     enabled: false
 
 thorns:
-  name: "Thorns"
-  description: "Gives a &a%placeholder%%&r chance to reflect some incoming damage to the attacker"
+  name: "荆棘"
+  description: "有 &a%placeholder%%&r 的概率将部分伤害反弹给攻击者"
   placeholder: "%level% * 15"
   type: normal
   rarity: epic
@@ -81,8 +81,8 @@ thorns:
     enabled: false
 
 depth_strider:
-  name: "Depth Strider"
-  description: "Reduces underwater movement slowdown by &a%placeholder%%"
+  name: "深海探索者"
+  description: "水下移动减速降低 &a%placeholder%%"
   placeholder: "%level% * 33.333333"
   type: normal
   rarity: rare
@@ -90,8 +90,8 @@ depth_strider:
     enabled: false
 
 frost_walker:
-  name: "Frost Walker"
-  description: "Turns water within a &a%placeholder%&r block radius of the player into ice"
+  name: "冰霜行者"
+  description: "将玩家周围 &a%placeholder%&r 格内的水冻结成冰"
   placeholder: "%level% + 2"
   type: normal
   rarity: rare
@@ -99,16 +99,16 @@ frost_walker:
     enabled: false
 
 binding_curse:
-  name: "Curse of Binding"
-  description: Items cannot be removed from armor slots
+  name: "绑定诅咒"
+  description: "物品无法从盔甲栏取下"
   type: curse
   rarity: epic
   drag-and-drop:
     enabled: false
 
 sharpness:
-  name: "Sharpness"
-  description: "Deals &a%placeholder%&r bonus melee damage"
+  name: "锋利"
+  description: "造成 &a%placeholder%&r 点额外近战伤害"
   placeholder: "0.5 * %level% + 1"
   type: normal
   rarity: common
@@ -116,8 +116,8 @@ sharpness:
     enabled: false
 
 smite:
-  name: "Smite"
-  description: "Gives a &a%placeholder%&r bonus to melee damage against undead mobs"
+  name: "亡灵杀手"
+  description: "对亡灵生物的近战伤害提升 &a%placeholder%"
   placeholder: "2.5 * %level%"
   type: normal
   rarity: uncommon
@@ -125,8 +125,8 @@ smite:
     enabled: false
 
 bane_of_arthropods:
-  name: "Bane of Arthropods"
-  description: "Gives a &a%damage%&r bonus to melee damage against arthropods and gives up to &a%seconds%&r seconds of Slowness IV"
+  name: "节肢杀手"
+  description: "对节肢生物的近战伤害提升 &a%damage%&r,并施加最高 &a%seconds%&r 秒的缓慢 IV"
   placeholders:
     damage: "2.5 * %level%"
     seconds: "0.5 * %level%"
@@ -136,8 +136,8 @@ bane_of_arthropods:
     enabled: false
 
 knockback:
-  name: "Knockback"
-  description: "Gives a &a%placeholder%%&r bonus to attack knockback"
+  name: "击退"
+  description: "攻击击退提升 &a%placeholder%%"
   placeholder: "%level% * 85 + 20"
   type: normal
   rarity: uncommon
@@ -145,8 +145,8 @@ knockback:
     enabled: false
 
 fire_aspect:
-  name: "Fire Aspect"
-  description: "Sets opponents on fire for &a4&r seconds, dealing &a%placeholder%&r damage each fire tick"
+  name: "火焰附加"
+  description: "点燃敌人 &a4&r 秒,每次火焰伤害造成 &a%placeholder%&r 点伤害"
   placeholder: "(%level% * 4) - 1"
   type: normal
   rarity: rare
@@ -154,8 +154,8 @@ fire_aspect:
     enabled: false
 
 looting:
-  name: "Looting"
-  description: "Increases maximum common drops by &a%common%&r, and the chance to get rare drops by &a%rare%%"
+  name: "抢夺"
+  description: "普通掉落上限增加 &a%common%&r,稀有掉落概率提高 &a%rare%%"
   placeholders:
     common: "%level%"
     rare: "%level%"
@@ -166,8 +166,8 @@ looting:
 
 # Pre-1.21
 sweeping:
-  name: "Sweeping Edge"
-  description: "Increases sweeping attack damage by &a%placeholder%%"
+  name: "横扫之刃"
+  description: "横扫攻击伤害提高 &a%placeholder%%"
   placeholder: "%level% / (%level% + 1)"
   type: normal
   rarity: rare
@@ -176,8 +176,8 @@ sweeping:
 
 # 1.21+
 sweeping_edge:
-  name: "Sweeping Edge"
-  description: "Increases sweeping attack damage by &a%placeholder%%"
+  name: "横扫之刃"
+  description: "横扫攻击伤害提高 &a%placeholder%%"
   placeholder: "%level% / (%level% + 1)"
   type: normal
   rarity: rare
@@ -185,8 +185,8 @@ sweeping_edge:
     enabled: false
 
 efficiency:
-  name: "Efficiency"
-  description: "Increases mining speed by &a%placeholder%%"
+  name: "效率"
+  description: "挖掘速度提高 &a%placeholder%%"
   placeholder: "20 + 5 * %level%"
   type: normal
   rarity: common
@@ -194,16 +194,16 @@ efficiency:
     enabled: false
 
 silk_touch:
-  name: "Silk Touch"
-  description: "Mined blocks drop themselves exactly"
+  name: "精准采集"
+  description: "挖掘的方块原样掉落"
   type: normal
   rarity: epic
   drag-and-drop:
     enabled: false
 
 unbreaking:
-  name: "Unbreaking"
-  description: "Increases item durability &a%placeholder%x"
+  name: "耐久"
+  description: "物品耐久提升 &a%placeholder%x"
   placeholder: "%level% + 1"
   type: normal
   rarity: uncommon
@@ -211,8 +211,8 @@ unbreaking:
     enabled: false
 
 fortune:
-  name: "Fortune"
-  description: "Gives a &a%placeholder%%&r boost to certain block drops"
+  name: "时运"
+  description: "部分方块掉落提升 &a%placeholder%%"
   placeholder: "ceil(((1 / (%level% + 2)) + ((%level% + 1) / 2)) * 100 - 100)"
   type: normal
   rarity: rare
@@ -220,8 +220,8 @@ fortune:
     enabled: false
 
 power:
-  name: "Power"
-  description: "Gives a &a%placeholder%%&r bonus to arrow damage"
+  name: "力量"
+  description: "箭矢伤害提升 &a%placeholder%%"
   placeholder: "25 * (%level% + 1)"
   type: normal
   rarity: common
@@ -229,8 +229,8 @@ power:
     enabled: false
 
 punch:
-  name: "Punch"
-  description: "Increases arrow knockback by &a%placeholder%&r blocks"
+  name: "冲击"
+  description: "箭矢击退提高 &a%placeholder%&r 格"
   placeholder: "3 * %level%"
   type: normal
   rarity: rare
@@ -238,24 +238,24 @@ punch:
     enabled: false
 
 flame:
-  name: "Flame"
-  description: "Arrows set target on fire, dealing &a5&r fire damage"
+  name: "火矢"
+  description: "箭矢点燃目标,造成 &a5&r 点火焰伤害"
   type: normal
   rarity: rare
   drag-and-drop:
     enabled: false
 
 infinity:
-  name: "Infinity"
-  description: Stops regular arrows from being consumed when shot
+  name: "无限"
+  description: "射击时不会消耗普通箭矢"
   type: normal
   rarity: epic
   drag-and-drop:
     enabled: false
 
 luck_of_the_sea:
-  name: "Luck of the Sea"
-  description: "Increases chance of getting treasure loot by &a%placeholder%%"
+  name: "海之眷顾"
+  description: "获得宝藏的概率提高 &a%placeholder%%"
   placeholder: "2 * %level%"
   type: normal
   rarity: rare
@@ -263,8 +263,8 @@ luck_of_the_sea:
     enabled: false
 
 lure:
-  name: "Lure"
-  description: "Decreases fishing wait time by &a%placeholder%&r seconds"
+  name: "饵钓"
+  description: "钓鱼等待时间减少 &a%placeholder%&r 秒"
   placeholder: "%level% * 5"
   type: normal
   rarity: rare
@@ -272,16 +272,16 @@ lure:
     enabled: false
 
 loyalty:
-  name: "Loyalty"
-  description: Trident returns after being thrown
+  name: "忠诚"
+  description: "三叉戟投出后自动返回"
   type: normal
   rarity: uncommon
   drag-and-drop:
     enabled: false
 
 impaling:
-  name: "Impaling"
-  description: "Deals &a%placeholder%&r additional damage to ocean mobs"
+  name: "穿刺"
+  description: "对海洋生物造成 &a%placeholder%&r 点额外伤害"
   placeholder: "%level% * 2.5"
   type: normal
   rarity: rare
@@ -289,32 +289,32 @@ impaling:
     enabled: false
 
 riptide:
-  name: "Riptide"
-  description: Trident launches player when thrown in water or while raining
+  name: "激流"
+  description: "在水中或雨天投掷三叉戟时带动玩家前进"
   type: normal
   rarity: rare
   drag-and-drop:
     enabled: false
 
 channeling:
-  name: "Channeling"
-  description: Strikes lightning where trident lands during thunderstorms
+  name: "引雷"
+  description: "雷暴天气下三叉戟落点会降下闪电"
   type: normal
   rarity: epic
   drag-and-drop:
     enabled: false
 
 multishot:
-  name: "Multishot"
-  description: Shoots 3 arrows instead of 1
+  name: "多重射击"
+  description: "一次射出 3 支箭"
   type: normal
   rarity: rare
   drag-and-drop:
     enabled: false
 
 quick_charge:
-  name: "Quick Charge"
-  description: "Decreases crossbow charging time by &a%placeholder%&r seconds"
+  name: "快速装填"
+  description: "弩装填时间减少 &a%placeholder%&r 秒"
   placeholder: "%level% * 0.25"
   type: normal
   rarity: uncommon
@@ -322,8 +322,8 @@ quick_charge:
     enabled: false
 
 piercing:
-  name: "Piercing"
-  description: "Arrows pass through &a%placeholder%&r entities"
+  name: "穿透"
+  description: "箭矢可穿透 &a%placeholder%&r 个实体"
   placeholder: "%level% + 1"
   type: normal
   rarity: common
@@ -331,24 +331,24 @@ piercing:
     enabled: false
 
 mending:
-  name: "Mending"
-  description: Repair the item while gaining XP orbs
+  name: "经验修补"
+  description: "获得经验球时修复物品"
   type: normal
   rarity: rare
   drag-and-drop:
     enabled: false
 
 vanishing_curse:
-  name: "Curse of Vanishing"
-  description: Item destroyed on death
+  name: "消失诅咒"
+  description: "死亡时物品消失"
   type: curse
   rarity: epic
   drag-and-drop:
     enabled: false
 
 soul_speed:
-  name: "Soul Speed"
-  description: "Increases walking speed on soul sand and soul soil by &a%placeholder%%"
+  name: "灵魂疾行"
+  description: "在灵魂沙和灵魂土上的行走速度提高 &a%placeholder%%"
   placeholder: "(%level% * 0.105) + 1.3"
   type: normal
   rarity: epic
@@ -356,8 +356,8 @@ soul_speed:
     enabled: false
 
 swift_sneak:
-  name: "Swift Sneak"
-  description: "Reduces sneaking movement slowdown by &a%placeholder%%"
+  name: "迅捷潜行"
+  description: "潜行移动减速降低 &a%placeholder%%"
   placeholder: "min(%level% * 15, 100)"
   type: normal
   rarity: epic
@@ -365,8 +365,8 @@ swift_sneak:
     enabled: false
 
 density:
-  name: "Density"
-  description: "Deals &a%placeholder%&r bonus damage per block fallen"
+  name: "致密"
+  description: "每坠落一格造成 &a%placeholder%&r 点额外伤害"
   placeholder: "0.5 * %level%"
   type: normal
   rarity: common
@@ -374,8 +374,8 @@ density:
     enabled: false
 
 breach:
-  name: "Breach"
-  description: "Reduces effectiveness of the target's armor by &a%placeholder%%"
+  name: "破甲"
+  description: "降低目标护甲效果 &a%placeholder%%"
   placeholder: "15 * %level%"
   type: normal
   rarity: rare
@@ -383,8 +383,8 @@ breach:
     enabled: false
 
 wind_burst:
-  name: "Wind Burst"
-  description: "Multiplies upwards knockback on smash attacks by &a%placeholder%"
+  name: "冲击波"
+  description: "重锤砸击的向上击退提高 &a%placeholder%&r 倍"
   placeholder: "1.15 + 0.35 * %level%"
   type: normal
   rarity: legendary
@@ -392,8 +392,8 @@ wind_burst:
     enabled: false
 
 lunge:
-  name: "Lunge"
-  description: "Launch forward &a%placeholder%&r blocks per second on jab attacks"
+  name: "突刺"
+  description: "突刺攻击时以每秒 &a%placeholder%&r 格的速度向前冲刺"
   placeholder: "round(%level * 9.16)"
   type: normal
   rarity: uncommon

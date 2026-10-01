@@ -1,5 +1,5 @@
-display-name: "Thrive"
-description: "Gives &a%placeholder%&r bonus health"
+display-name: "生机勃勃"
+description: "额外提升 &a%placeholder%&r 点生命值"
 placeholder: "%level%"
 type: normal
 

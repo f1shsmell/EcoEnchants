@@ -1,5 +1,5 @@
-display-name: "Nether Prospector"
-description: "Gives a &a%placeholder%%&r boost to ancient debris drops"
+display-name: "下界勘探"
+description: "远古残骸掉落提升 &a%placeholder%%"
 placeholder: "ceil(((1 / (%level% + 2)) + ((%level% + 1) / 2)) * 100 - 100)"
 type: normal
 

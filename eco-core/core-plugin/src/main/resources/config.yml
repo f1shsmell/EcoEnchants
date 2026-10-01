@@ -105,20 +105,20 @@ enchantinfo:
     show-max-level: true # Whether the book should be the max level or level 1
     lore: # The description is automatically appended
       - ""
-      - "&fMax Level: &a%max_level%"
-      - "&fRarity: &a%rarity%"
-      - "&fApplicable to: &a%targets%"
-      - "&fConflicts with: &a%conflicts%"
-      - "&fRequires: &a%required%"
+      - "&f最高等级: &a%max_level%"
+      - "&f稀有度: &a%rarity%"
+      - "&f适用物品: &a%targets%"
+      - "&f冲突附魔: &a%conflicts%"
+      - "&f前置要求: &a%required%"
       - ""
-      - "&fTradeable: &a%tradeable%"
-      - "&fDiscoverable: &a%discoverable%"
-      - "&fDiscoverable (Chests): &a%discoverable_chests%"
-      - "&fDiscoverable (Fishing): &a%discoverable_fishing%"
-      - "&fDiscoverable (Mob Drops): &a%discoverable_mob_drops%"
-      - "&fDiscoverable (Raids): &a%discoverable_raids%"
-      - "&fEnchantable: &a%enchantable%"
-      - "&fDrag and Drop: &a%drag_and_drop%"
+      - "&f可交易: &a%tradeable%"
+      - "&f可发现: &a%discoverable%"
+      - "&f可发现(宝箱): &a%discoverable_chests%"
+      - "&f可发现(钓鱼): &a%discoverable_fishing%"
+      - "&f可发现(生物掉落): &a%discoverable_mob_drops%"
+      - "&f可发现(袭击): &a%discoverable_raids%"
+      - "&f可附魔: &a%enchantable%"
+      - "&f拖放附魔: &a%drag_and_drop%"
 
   # Custom GUI slots; see here for a how-to: https://hub.auxilor.io/wiki/eco/pages#custom-gui-slots
   custom-slots: [ ]
@@ -126,7 +126,7 @@ enchantinfo:
 # Options for the enchant GUI.
 enchant-gui:
   rows: 6 # How many rows to have in the GUI
-  title: "Enchant GUI &7(%page%/%max_page%)" # The title of the GUI
+  title: "附魔界面 &7(%page%/%max_page%)" # The title of the GUI
 
   mask: # The background material
     items:
@@ -144,12 +144,12 @@ enchant-gui:
 
   # Options for the info item
   info:
-    item: player_head name:"&aHow do I use this?" texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0=
+    item: player_head name:"&a如何使用?" texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0=
     lore:
-      - "&fPlace an item in the slot at the top,"
-      - "&fand all the enchantments you can add"
-      - "&fto to this item will show up in the"
-      - "&farea below!"
+      - "&f将物品放入顶部的槽位,"
+      - "&f所有可添加到该物品的附魔"
+      - "&f都会显示在下方"
+      - "&f区域中!"
     row: 1
     column: 9
 
@@ -165,13 +165,13 @@ enchant-gui:
       pitch: 1.0
       volume: 1.0
     forwards:
-      item: arrow name:"&fNext Page" # The item. Will not show if on the last page.
-      item-inactive: gray_dye name:"&7Next Page" # The item shown on the last page
+      item: arrow name:"&f下一页" # The item. Will not show if on the last page.
+      item-inactive: gray_dye name:"&7下一页" # The item shown on the last page
       row: 6
       column: 6
     backwards:
-      item: arrow name:"&fPrevious Page" # The item. Will not show if on the first page.
-      item-inactive: gray_dye name:"&7Previous Page" # The item shown on the first page
+      item: arrow name:"&f上一页" # The item. Will not show if on the first page.
+      item-inactive: gray_dye name:"&7上一页" # The item shown on the first page
       row: 6
       column: 4
 
@@ -179,7 +179,7 @@ enchant-gui:
   close-button:
     enabled: true
     item: barrier
-    name: "&cClose"
+    name: "&c关闭"
     lore: [ ]
     row: 6
     column: 5
@@ -206,7 +206,7 @@ enchant-gui:
   # Only shown when grouped is true.
   back-button:
     enabled: true
-    item: arrow name:"&fBack to Groups"
+    item: arrow name:"&f返回分组"
     lore: []
     row: 6
     column: 1
@@ -214,7 +214,7 @@ enchant-gui:
 # Options for the group selection GUI (only used when enchant-gui.grouped is true)
 group-gui:
   rows: 3
-  title: "Enchantment Groups"
+  title: "附魔分组"
 
   mask:
     items:
@@ -232,27 +232,27 @@ group-gui:
   # Groups with unrecognized IDs are silently ignored.
   groups:
     - id: normal
-      item: enchanted_book name:"&7Normal Enchantments"
+      item: enchanted_book name:"&7普通附魔"
       lore:
-        - "&fClick to browse normal enchantments"
+        - "&f点击浏览普通附魔"
       row: 2
       column: 2
     - id: spell
-      item: enchanted_book name:"<gradient:#0575E6:#1E3FBA>Spell Enchantments"
+      item: enchanted_book name:"<gradient:#0575E6:#1E3FBA>法术附魔"
       lore:
-        - "&fClick to browse spell enchantments"
+        - "&f点击浏览法术附魔"
       row: 2
       column: 4
     - id: special
-      item: enchanted_book name:"<gradient:#FB57EC:#EF1DEC>Special Enchantments"
+      item: enchanted_book name:"<gradient:#FB57EC:#EF1DEC>特殊附魔"
       lore:
-        - "&fClick to browse special enchantments"
+        - "&f点击浏览特殊附魔"
       row: 2
       column: 6
     - id: curse
-      item: enchanted_book name:"&cCurse Enchantments"
+      item: enchanted_book name:"&c诅咒附魔"
       lore:
-        - "&fClick to browse curse enchantments"
+        - "&f点击浏览诅咒附魔"
       row: 2
       column: 8
 

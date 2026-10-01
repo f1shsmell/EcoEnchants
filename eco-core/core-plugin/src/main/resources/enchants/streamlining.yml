@@ -1,5 +1,5 @@
-display-name: "Streamlining"
-description: "Gives a &a%placeholder%%&r boost to movement speed"
+display-name: "流线"
+description: "移动速度提升 &a%placeholder%%"
 placeholder: "%level% * 5"
 type: normal
 

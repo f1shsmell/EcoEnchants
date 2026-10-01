@@ -1,5 +1,5 @@
-display-name: "Blast Mining"
-description: "&a%placeholder%% &rchance to mine blocks in a 3x3 area"
+display-name: "爆破采矿"
+description: "有 &a%placeholder%% &r的概率以 3x3 范围挖掘方块"
 placeholder: "5 * %level%"
 type: special
 

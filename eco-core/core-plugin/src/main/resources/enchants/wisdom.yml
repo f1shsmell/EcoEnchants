@@ -1,5 +1,5 @@
-display-name: "Wisdom"
-description: "&rIncreases dropped experience by &a%placeholder%%"
+display-name: "经验时运"
+description: "&r掉落的经验提高 &a%placeholder%%"
 placeholder: "100 + %level% * 20"
 type: normal
 

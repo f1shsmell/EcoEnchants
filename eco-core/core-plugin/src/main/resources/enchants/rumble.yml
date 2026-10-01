@@ -1,5 +1,5 @@
-display-name: "Rumble"
-description: "Gives &a%damage%&r damage to all entities in a &a%radius%&r block radius"
+display-name: "震荡"
+description: "对 &a%radius%&r 格内的所有实体造成 &a%damage%&r 点伤害"
 placeholders:
   radius: "2 + %level%"
   damage: "3 * %level%"

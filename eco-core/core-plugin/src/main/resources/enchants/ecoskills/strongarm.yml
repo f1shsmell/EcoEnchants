@@ -1,5 +1,5 @@
-display-name: "Strongarm"
-description: "Gives &a+%placeholder%&r %ecoskills_strength_name%"
+display-name: "神力"
+description: "增加 &a+%placeholder%&r 点 %ecoskills_strength_name%"
 placeholder: "2 + 4 * %level%"
 type: normal
 

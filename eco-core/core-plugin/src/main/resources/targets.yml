@@ -21,67 +21,67 @@ extra-enchantable-items:
 
 targets:
   - id: pickaxe
-    display-name: "Pickaxes"
+    display-name: "镐"
     slot: mainhand
     items:
       - "#items_pickaxes"
 
   - id: axe
-    display-name: "Axes"
+    display-name: "斧"
     slot: mainhand
     items:
       - "#items_axes"
 
   - id: hoe
-    display-name: "Hoes"
+    display-name: "锄"
     slot: mainhand
     items:
       - "#items_hoes"
 
   - id: shovel
-    display-name: "Shovels"
+    display-name: "锹"
     slot: mainhand
     items:
       - "#items_shovels"
 
   - id: sword
-    display-name: "Swords"
+    display-name: "剑"
     slot: mainhand
     items:
       - "#items_swords"
 
   - id: spear
-    display-name: "Spear"
+    display-name: "矛"
     slot: mainhand
     items:
       - "#items_spears"
 
   - id: helmet
-    display-name: "Helmets"
+    display-name: "头盔"
     slot: armor
     items:
       - "#items_head_armor"
 
   - id: chestplate
-    display-name: "Chestplates"
+    display-name: "胸甲"
     slot: armor
     items:
       - "#items_chest_armor"
 
   - id: leggings
-    display-name: "Leggings"
+    display-name: "护腿"
     slot: armor
     items:
       - "#items_leg_armor"
 
   - id: boots
-    display-name: "Boots"
+    display-name: "靴子"
     slot: armor
     items:
       - "#items_foot_armor"
 
   - id: armor
-    display-name: "Armor"
+    display-name: "盔甲"
     slot: armor
     items:
       - "#items_head_armor"
@@ -90,61 +90,61 @@ targets:
       - "#items_foot_armor"
 
   - id: trident
-    display-name: "Tridents"
+    display-name: "三叉戟"
     slot: mainhand
     items:
       - "*trident"
 
   - id: bow
-    display-name: "Bows"
+    display-name: "弓"
     slot: mainhand
     items:
       - "*bow"
 
   - id: crossbow
-    display-name: "Crossbows"
+    display-name: "弩"
     slot: mainhand
     items:
       - "*crossbow"
 
   - id: shears
-    display-name: "Shears"
+    display-name: "剪刀"
     slot: mainhand
     items:
       - "*shears"
 
   - id: shield
-    display-name: "Shields"
+    display-name: "盾牌"
     slot: hands
     items:
       - "*shield"
 
   - id: fishing_rod
-    display-name: "Fishing Rods"
+    display-name: "钓鱼竿"
     slot: mainhand
     items:
       - "*fishing_rod"
 
   - id: flint_and_steel
-    display-name: "Flint and Steels"
+    display-name: "打火石"
     slot: mainhand
     items:
       - "*flint_and_steel"
 
   - id: carrot_on_a_stick
-    display-name: "Carrots on Sticks"
+    display-name: "胡萝卜钓竿"
     slot: mainhand
     items:
       - "*carrot_on_a_stick"
 
   - id: elytra
-    display-name: "Elytra"
+    display-name: "鞘翅"
     slot: armor
     items:
       - "*elytra"
 
   - id: mace
-    display-name: "Mace"
+    display-name: "重锤"
     slot: mainhand
     items:
       - "*mace"
