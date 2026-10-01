@@ -31,6 +31,8 @@ jobs:
         run: |
           version="${GITHUB_REF_NAME#v}"
           cp "bin/EcoEnchants v${version}.jar" "EcoEnchants-${version}.jar"
-          gh release create "$GITHUB_REF_NAME" "EcoEnchants-${version}.jar" \
-            --title "EcoEnchants ${version} (unofficial community build)" \
+          # GPLv3 §6: accompany the binary with the license text
+          cp LICENSE.md "EcoEnchants-${version}-LICENSE.txt"
+          gh release create "$GITHUB_REF_NAME" "EcoEnchants-${version}.jar" "EcoEnchants-${version}-LICENSE.txt" \
+            --title "EcoEnchants ${version} 简体中文汉化版 (unofficial community build)" \
             --notes-file .github/release-notes.md
