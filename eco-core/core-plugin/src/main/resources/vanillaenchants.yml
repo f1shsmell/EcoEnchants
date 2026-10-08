@@ -1,11 +1,16 @@
 ﻿# Rarity option does not affect vanilla enchantments.
 # The option is there for the display option to sort by rarity.
 
+# Targets are only used for display, such as the book-targets line in config.yml.
+# They do not change which items a vanilla enchantment can be applied to.
+
 protection:
   name: "保护"
   description: "受到的伤害减少 &a%placeholder%%"
   placeholder: "%level% * 4"
   type: normal
+  targets:
+    - armor
   rarity: common
   #max-level: 6 # Custom max level to override for the enchantment. Raise it, but lowering it may cause bugs.
   #conflicts: [] # Custom conflicts to override for the enchantment. Add or remove conflicts as you please.
@@ -19,6 +24,8 @@ fire_protection:
     damage: "%level% * 8"
     time: "%level% * 15"
   type: normal
+  targets:
+    - armor
   rarity: uncommon
   drag-and-drop:
     enabled: false
@@ -28,6 +35,8 @@ feather_falling:
   description: "摔落伤害减少 &a%placeholder%%"
   placeholder: "%level% * 12"
   type: normal
+  targets:
+    - boots
   rarity: uncommon
   drag-and-drop:
     enabled: false
@@ -39,6 +48,8 @@ blast_protection:
     damage: "%level% * 8"
     knockback: "%level% * 15"
   type: normal
+  targets:
+    - armor
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -48,6 +59,8 @@ projectile_protection:
   description: "受到的弹射物伤害减少 &a%placeholder%%"
   placeholder: "%level% * 8"
   type: normal
+  targets:
+    - armor
   rarity: uncommon
   drag-and-drop:
     enabled: false
@@ -59,6 +72,8 @@ respiration:
     seconds: "15 * %level%"
     chance: "%level% / (%level% + 1)"
   type: normal
+  targets:
+    - helmet
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -67,6 +82,8 @@ aqua_affinity:
   name: "水下速掘"
   description: "消除水下挖掘速度惩罚"
   type: normal
+  targets:
+    - helmet
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -76,6 +93,8 @@ thorns:
   description: "有 &a%placeholder%%&r 的概率将部分伤害反弹给攻击者"
   placeholder: "%level% * 15"
   type: normal
+  targets:
+    - armor
   rarity: epic
   drag-and-drop:
     enabled: false
@@ -85,6 +104,8 @@ depth_strider:
   description: "水下移动减速降低 &a%placeholder%%"
   placeholder: "%level% * 33.333333"
   type: normal
+  targets:
+    - boots
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -94,6 +115,8 @@ frost_walker:
   description: "将玩家周围 &a%placeholder%&r 格内的水冻结成冰"
   placeholder: "%level% + 2"
   type: normal
+  targets:
+    - boots
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -102,6 +125,9 @@ binding_curse:
   name: "绑定诅咒"
   description: "物品无法从盔甲栏取下"
   type: curse
+  targets:
+    - armor
+    - elytra
   rarity: epic
   drag-and-drop:
     enabled: false
@@ -111,6 +137,10 @@ sharpness:
   description: "造成 &a%placeholder%&r 点额外近战伤害"
   placeholder: "0.5 * %level% + 1"
   type: normal
+  targets:
+    - sword
+    - axe
+    - spear
   rarity: common
   drag-and-drop:
     enabled: false
@@ -120,6 +150,11 @@ smite:
   description: "对亡灵生物的近战伤害提升 &a%placeholder%"
   placeholder: "2.5 * %level%"
   type: normal
+  targets:
+    - sword
+    - axe
+    - spear
+    - mace
   rarity: uncommon
   drag-and-drop:
     enabled: false
@@ -131,6 +166,11 @@ bane_of_arthropods:
     damage: "2.5 * %level%"
     seconds: "0.5 * %level%"
   type: normal
+  targets:
+    - sword
+    - axe
+    - spear
+    - mace
   rarity: uncommon
   drag-and-drop:
     enabled: false
@@ -140,6 +180,9 @@ knockback:
   description: "攻击击退提升 &a%placeholder%%"
   placeholder: "%level% * 85 + 20"
   type: normal
+  targets:
+    - sword
+    - spear
   rarity: uncommon
   drag-and-drop:
     enabled: false
@@ -149,6 +192,10 @@ fire_aspect:
   description: "点燃敌人 &a4&r 秒,每次火焰伤害造成 &a%placeholder%&r 点伤害"
   placeholder: "(%level% * 4) - 1"
   type: normal
+  targets:
+    - sword
+    - spear
+    - mace
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -160,6 +207,9 @@ looting:
     common: "%level%"
     rare: "%level%"
   type: normal
+  targets:
+    - sword
+    - spear
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -170,6 +220,8 @@ sweeping:
   description: "横扫攻击伤害提高 &a%placeholder%%"
   placeholder: "%level% / (%level% + 1)"
   type: normal
+  targets:
+    - sword
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -180,6 +232,8 @@ sweeping_edge:
   description: "横扫攻击伤害提高 &a%placeholder%%"
   placeholder: "%level% / (%level% + 1)"
   type: normal
+  targets:
+    - sword
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -189,6 +243,12 @@ efficiency:
   description: "挖掘速度提高 &a%placeholder%%"
   placeholder: "20 + 5 * %level%"
   type: normal
+  targets:
+    - pickaxe
+    - axe
+    - shovel
+    - hoe
+    - shears
   rarity: common
   drag-and-drop:
     enabled: false
@@ -197,6 +257,11 @@ silk_touch:
   name: "精准采集"
   description: "挖掘的方块原样掉落"
   type: normal
+  targets:
+    - pickaxe
+    - axe
+    - shovel
+    - hoe
   rarity: epic
   drag-and-drop:
     enabled: false
@@ -206,6 +271,24 @@ unbreaking:
   description: "物品耐久提升 &a%placeholder%x"
   placeholder: "%level% + 1"
   type: normal
+  targets:
+    - pickaxe
+    - axe
+    - hoe
+    - shovel
+    - sword
+    - spear
+    - armor
+    - elytra
+    - trident
+    - bow
+    - crossbow
+    - mace
+    - shears
+    - shield
+    - fishing_rod
+    - flint_and_steel
+    - carrot_on_a_stick
   rarity: uncommon
   drag-and-drop:
     enabled: false
@@ -215,6 +298,11 @@ fortune:
   description: "部分方块掉落提升 &a%placeholder%%"
   placeholder: "ceil(((1 / (%level% + 2)) + ((%level% + 1) / 2)) * 100 - 100)"
   type: normal
+  targets:
+    - pickaxe
+    - axe
+    - shovel
+    - hoe
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -224,6 +312,8 @@ power:
   description: "箭矢伤害提升 &a%placeholder%%"
   placeholder: "25 * (%level% + 1)"
   type: normal
+  targets:
+    - bow
   rarity: common
   drag-and-drop:
     enabled: false
@@ -233,6 +323,8 @@ punch:
   description: "箭矢击退提高 &a%placeholder%&r 格"
   placeholder: "3 * %level%"
   type: normal
+  targets:
+    - bow
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -241,6 +333,8 @@ flame:
   name: "火矢"
   description: "箭矢点燃目标,造成 &a5&r 点火焰伤害"
   type: normal
+  targets:
+    - bow
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -249,6 +343,8 @@ infinity:
   name: "无限"
   description: "射击时不会消耗普通箭矢"
   type: normal
+  targets:
+    - bow
   rarity: epic
   drag-and-drop:
     enabled: false
@@ -258,6 +354,8 @@ luck_of_the_sea:
   description: "获得宝藏的概率提高 &a%placeholder%%"
   placeholder: "2 * %level%"
   type: normal
+  targets:
+    - fishing_rod
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -267,6 +365,8 @@ lure:
   description: "钓鱼等待时间减少 &a%placeholder%&r 秒"
   placeholder: "%level% * 5"
   type: normal
+  targets:
+    - fishing_rod
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -275,6 +375,8 @@ loyalty:
   name: "忠诚"
   description: "三叉戟投出后自动返回"
   type: normal
+  targets:
+    - trident
   rarity: uncommon
   drag-and-drop:
     enabled: false
@@ -284,6 +386,8 @@ impaling:
   description: "对海洋生物造成 &a%placeholder%&r 点额外伤害"
   placeholder: "%level% * 2.5"
   type: normal
+  targets:
+    - trident
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -292,6 +396,8 @@ riptide:
   name: "激流"
   description: "在水中或雨天投掷三叉戟时带动玩家前进"
   type: normal
+  targets:
+    - trident
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -300,6 +406,8 @@ channeling:
   name: "引雷"
   description: "雷暴天气下三叉戟落点会降下闪电"
   type: normal
+  targets:
+    - trident
   rarity: epic
   drag-and-drop:
     enabled: false
@@ -308,6 +416,8 @@ multishot:
   name: "多重射击"
   description: "一次射出 3 支箭"
   type: normal
+  targets:
+    - crossbow
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -317,6 +427,8 @@ quick_charge:
   description: "弩装填时间减少 &a%placeholder%&r 秒"
   placeholder: "%level% * 0.25"
   type: normal
+  targets:
+    - crossbow
   rarity: uncommon
   drag-and-drop:
     enabled: false
@@ -326,6 +438,8 @@ piercing:
   description: "箭矢可穿透 &a%placeholder%&r 个实体"
   placeholder: "%level% + 1"
   type: normal
+  targets:
+    - crossbow
   rarity: common
   drag-and-drop:
     enabled: false
@@ -334,6 +448,24 @@ mending:
   name: "经验修补"
   description: "获得经验球时修复物品"
   type: normal
+  targets:
+    - pickaxe
+    - axe
+    - hoe
+    - shovel
+    - sword
+    - spear
+    - armor
+    - elytra
+    - trident
+    - bow
+    - crossbow
+    - mace
+    - shears
+    - shield
+    - fishing_rod
+    - flint_and_steel
+    - carrot_on_a_stick
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -342,6 +474,24 @@ vanishing_curse:
   name: "消失诅咒"
   description: "死亡时物品消失"
   type: curse
+  targets:
+    - pickaxe
+    - axe
+    - hoe
+    - shovel
+    - sword
+    - spear
+    - armor
+    - elytra
+    - trident
+    - bow
+    - crossbow
+    - mace
+    - shears
+    - shield
+    - fishing_rod
+    - flint_and_steel
+    - carrot_on_a_stick
   rarity: epic
   drag-and-drop:
     enabled: false
@@ -351,6 +501,8 @@ soul_speed:
   description: "在灵魂沙和灵魂土上的行走速度提高 &a%placeholder%%"
   placeholder: "(%level% * 0.105) + 1.3"
   type: normal
+  targets:
+    - boots
   rarity: epic
   drag-and-drop:
     enabled: false
@@ -360,6 +512,8 @@ swift_sneak:
   description: "潜行移动减速降低 &a%placeholder%%"
   placeholder: "min(%level% * 15, 100)"
   type: normal
+  targets:
+    - leggings
   rarity: epic
   drag-and-drop:
     enabled: false
@@ -369,6 +523,8 @@ density:
   description: "每坠落一格造成 &a%placeholder%&r 点额外伤害"
   placeholder: "0.5 * %level%"
   type: normal
+  targets:
+    - mace
   rarity: common
   drag-and-drop:
     enabled: false
@@ -378,6 +534,8 @@ breach:
   description: "降低目标护甲效果 &a%placeholder%%"
   placeholder: "15 * %level%"
   type: normal
+  targets:
+    - mace
   rarity: rare
   drag-and-drop:
     enabled: false
@@ -387,6 +545,8 @@ wind_burst:
   description: "重锤砸击的向上击退提高 &a%placeholder%&r 倍"
   placeholder: "1.15 + 0.35 * %level%"
   type: normal
+  targets:
+    - mace
   rarity: legendary
   drag-and-drop:
     enabled: false
@@ -396,6 +556,8 @@ lunge:
   description: "突刺攻击时以每秒 &a%placeholder%&r 格的速度向前冲刺"
   placeholder: "round(%level * 9.16)"
   type: normal
+  targets:
+    - spear
   rarity: uncommon
   drag-and-drop:
     enabled: false
